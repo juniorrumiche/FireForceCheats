@@ -1,0 +1,2 @@
+PROCESS_NAME = 'HD-Player.exe'
+APP_NAME = 'FREE PANEL'
