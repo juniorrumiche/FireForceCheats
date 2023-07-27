@@ -78,3 +78,63 @@ class FreeFire(object):
 
         except Exception as e:
             show_notification(str(e))
+
+    @staticmethod
+    def female_hand():
+        scan = bytes.fromhex('00 00 80 3F 31 F2 99 3E 60 55')
+        replace = bytes.fromhex('00 00 88 42 31 F2 99 3E 60 55')
+
+        try:
+            flag = find_replace_bytes(scan, replace)
+            show_notification('Antena Female Hand injectado' if flag else 'Fallo al injectar')
+
+        except Exception as e:
+            show_notification(str(e))
+
+    @staticmethod
+    def female_head():
+        scan = bytes.fromhex('00 00 80 3F FB 67 13 3F')
+        replace = bytes.fromhex('00 00 80 42 FB 67 13 3F')
+
+        try:
+            flag = find_replace_bytes(scan, replace)
+            show_notification('Antena Female Head injectado' if flag else 'Fallo al injectar')
+
+        except Exception as e:
+            show_notification(str(e))
+
+    @staticmethod
+    def male_hand():
+        scan = bytes.fromhex('00 00 80 3F 9F CD 7E BE')
+        replace = bytes.fromhex('00 00 88 42 9F CD 7E BE')
+
+        try:
+            flag = find_replace_bytes(scan, replace)
+            show_notification('Antena Male Hand injectado' if flag else 'Fallo al injectar')
+
+        except Exception as e:
+            show_notification(str(e))
+
+    @staticmethod
+    def male_head():
+        scan = bytes.fromhex('00 00 80 3F AC E5 22 BF C5 1F A0 BC')
+        replace = bytes.fromhex('00 00 80 42 AC E5 22 BF C5 1F A0 BC')
+
+        try:
+            flag = find_replace_bytes(scan, replace)
+            show_notification('Antena Male Head injectado' if flag else 'Fallo al injectar')
+
+        except Exception as e:
+            show_notification(str(e))
+
+    @staticmethod
+    def antena():
+        scan = bytes.fromhex('00 00 80 3F CF F7 AD 34')
+        replace = bytes.fromhex('33 33 34 43 CF F7 AD 34')
+
+        try:
+            flag = find_replace_bytes(scan, replace)
+            show_notification('Antena Male Head injectado' if flag else 'Fallo al injectar')
+
+        except Exception as e:
+            show_notification(str(e))
