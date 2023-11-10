@@ -7,13 +7,13 @@ if sys.platform == "win32":
 
 build_exe_options = {
     "packages": ["os", "sys", "PyQt5", "qfluentwidgets"],
-    "include_files": ["ui/resources/icon.png"]
+    "include_files": ["ui/resources/icon.png"],
 }
 
 setup(
-    name = "FREE PANEL",
-    version = "0.1",
-    description = "My PyQt5 application",
-    options = {"build_exe": build_exe_options},
-    executables = [Executable("main.py", base=base, icon="ui/resources/icon.png")]
+    name="FREE PANEL",
+    version="0.1",
+    description="My PyQt5 application",
+    options={"build_exe": build_exe_options},
+    executables=[Executable("main.py", base=base, icon="ui/resources/icon.png")],
 )
